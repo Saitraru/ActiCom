@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @project.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @project.descripcion %>
+</p>
+
+<p>
+  <strong>Inicio votacion:</strong>
+  <%= @project.inicio_votacion %>
+</p>
+
+<p>
+  <strong>Cierre votacion:</strong>
+  <%= @project.cierre_votacion %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @project.imagen %>
+</p>
+
+<p>
+  <strong>Votos positivos:</strong>
+  <%= @project.votos_positivos %>
+</p>
+
+<p>
+  <strong>Votos negativos:</strong>
+  <%= @project.votos_negativos %>
+</p>
+
+<p>
+  <strong>Resultado:</strong>
+  <%= @project.resultado %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

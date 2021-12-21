@@ -1,0 +1,62 @@
+<div class="col-md-7 col-lg-8">
+  <h4 class="mb-3">Proyectos</h4>
+<%= form_with(model: project) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :nombre, class: "form-label" %>
+    <%= form.text_field :nombre, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :descripcion, class: "form-label" %>
+    <%= form.text_field :descripcion, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :inicio_votacion, class: "form-label" %>
+    <%= form.date_select :inicio_votacion, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :cierre_votacion, class: "form-label" %>
+    <%= form.date_select :cierre_votacion, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :imagen, class: "form-label" %>
+    <%= form.text_field :imagen, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :votos_positivos, class: "form-label" %>
+    <%= form.number_field :votos_positivos, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :votos_negativos, class: "form-label" %>
+    <%= form.number_field :votos_negativos, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :resultado, class: "form-label" %>
+    <%= form.text_field :resultado, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  </div>
+<% end %>
+</div>

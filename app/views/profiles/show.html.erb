@@ -1,0 +1,39 @@
+
+
+<p>
+  <strong>Rut:</strong>
+  <%= @profile.rut %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @profile.nombre %>
+</p>
+
+<p>
+  <strong>Apellido1:</strong>
+  <%= @profile.apellido1 %>
+</p>
+
+<p>
+  <strong>Apellido2:</strong>
+  <%= @profile.apellido2 %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @profile.telefono %>
+</p>
+
+<p>
+  <strong>Cuota:</strong>
+  <%= @profile.cuota %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

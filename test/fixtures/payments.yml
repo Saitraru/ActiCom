@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  monto_pago: 1
+  saldo_acum: 1
+  fecha_pago: 2021-12-21
+  total_pago: 1
+  medio_pago: MyString
+  profile: one
+  motivo: MyString
+  mes_cuota: MyString
+  anio: 1
+
+two:
+  monto_pago: 1
+  saldo_acum: 1
+  fecha_pago: 2021-12-21
+  total_pago: 1
+  medio_pago: MyString
+  profile: two
+  motivo: MyString
+  mes_cuota: MyString
+  anio: 1

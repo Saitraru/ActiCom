@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Monto pago:</strong>
+  <%= @payment.monto_pago %>
+</p>
+
+<p>
+  <strong>Saldo acum:</strong>
+  <%= @payment.saldo_acum %>
+</p>
+
+<p>
+  <strong>Fecha pago:</strong>
+  <%= @payment.fecha_pago %>
+</p>
+
+<p>
+  <strong>Total pago:</strong>
+  <%= @payment.total_pago %>
+</p>
+
+<p>
+  <strong>Medio pago:</strong>
+  <%= @payment.medio_pago %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @payment.profile_id %>
+</p>
+
+<p>
+  <strong>Motivo:</strong>
+  <%= @payment.motivo %>
+</p>
+
+<p>
+  <strong>Mes cuota:</strong>
+  <%= @payment.mes_cuota %>
+</p>
+
+<p>
+  <strong>Anio:</strong>
+  <%= @payment.anio %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

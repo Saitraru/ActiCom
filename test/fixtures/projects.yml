@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  descripcion: MyString
+  inicio_votacion: 2021-12-21
+  cierre_votacion: 2021-12-21
+  imagen: MyString
+  votos_positivos: 1
+  votos_negativos: 1
+  resultado: MyString
+
+two:
+  nombre: MyString
+  descripcion: MyString
+  inicio_votacion: 2021-12-21
+  cierre_votacion: 2021-12-21
+  imagen: MyString
+  votos_positivos: 1
+  votos_negativos: 1
+  resultado: MyString

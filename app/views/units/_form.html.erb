@@ -1,0 +1,64 @@
+<div class="col-md-7 col-lg-8">
+  <h4 class="mb-3">Unidades</h4>
+<%= form_with(model: unit) do |form| %>
+  <% if unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+        <% unit.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :tipo, class: "form-label" %>
+    <%= form.text_field :tipo, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :profile_id, class: "form-label" %>
+    <%= form.select :profile_id, @profiles.map {|p|[p.nombre, p.id] }, prompt: "Seleccione una opción...", class: "form-select" %>
+    
+
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :nombre_calle, class: "form-label" %>
+    <%= form.text_field :nombre_calle, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :numero_calle, class: "form-label" %>
+    <%= form.text_field :numero_calle, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :comuna, class: "form-label" %>
+    <%= form.text_field :comuna, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :ciudad, class: "form-label" %>
+    <%= form.text_field :ciudad, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :region, class: "form-label" %>
+    <%= form.text_field :region, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :zip_code, class: "form-label" %>
+    <%= form.number_field :zip_code, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Enviar"%>
+  </div>
+  </div>
+<% end %>
+</div>

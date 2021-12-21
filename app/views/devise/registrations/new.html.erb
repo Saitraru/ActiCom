@@ -1,0 +1,30 @@
+<h2>Inscribirse</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="form-floating">
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Correo" %>
+    <%= f.label :email, "Correo" %>
+  </div>
+
+  <div class="form-floating">
+    
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> Caracteres minimos)</em>
+    <% end %><br />
+    <%= f.password_field :password, class: "form-control", placeholder: "Contraseña" %>
+    <%= f.label :password, "Contraseña" %>
+  </div>
+
+  <div class="form-floating">
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "nueva contraseña" %>
+    <%= f.label :password_confirmation, "Repita su contraseña" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Registrarse" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

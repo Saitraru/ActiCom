@@ -1,0 +1,57 @@
+<div class="col-md-7 col-lg-8">
+  <h4 class="mb-3">Perfiles</h4>
+<%= form_with(model: profile) do |form| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> Este perfil no puede ser guardado</h2>
+
+      <ul>
+        <% profile.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :rut, class: "form-label" %>
+    <%= form.text_field :rut, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :nombre, class: "form-label" %>
+    <%= form.text_field :nombre, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :apellido1, class: "form-label" %>
+    <%= form.text_field :apellido1, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :apellido2, class: "form-label" %>
+    <%= form.text_field :apellido2, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :telefono, class: "form-label" %>
+    <%= form.text_field :telefono, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :cuota, class: "form-label" %>
+    <%= form.number_field :cuota, class: "form-control" %>
+  </div>
+
+  <div class="col-sm-6">
+    <%= form.label :user_id, class: "form-label" %>
+    <%= form.select :user_id, @users.map {|p|[p.nombre,p.id] }, prompt: "Seleccione una opción...", class: "form-select" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Enviar" %>
+  </div>
+</div>
+<% end %>
+</div>

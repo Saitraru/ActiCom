@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  profile: one
+  nombre_calle: MyString
+  numero_calle: MyString
+  comuna: MyString
+  ciudad: MyString
+  region: MyString
+  zip_code: 1
+
+two:
+  tipo: MyString
+  profile: two
+  nombre_calle: MyString
+  numero_calle: MyString
+  comuna: MyString
+  ciudad: MyString
+  region: MyString
+  zip_code: 1

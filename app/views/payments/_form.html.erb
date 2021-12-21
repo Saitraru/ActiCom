@@ -1,0 +1,73 @@
+<div class="col-md-7 col-lg-8">
+<h4 class="mb-3">Pagos</h4>
+<%= form_with(model: payment) do |form| %>
+  <% if payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+        <% payment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :monto_pago, class: "form-label" %>
+    <%= form.number_field :monto_pago, class: "form-control" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :saldo_acum, class: "form-label" %>
+    <%= form.number_field :saldo_acum, class: "form-control" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :fecha_pago, class: "form-label" %>
+    <%= form.date_select :fecha_pago, class: "form-control" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :total_pago, class: "form-label" %>
+    <%= form.number_field :total_pago, class: "form-control" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :medio_pago, class: "form-label" %>
+    <%= form.text_field :medio_pago, class: "form-control" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :profile_id, class: "form-label" %>
+        <%= form.select :profile_id, @profiles.map {|p|[p.nombre,p.id] }, prompt: "Seleccione una opción...", class: "form-select" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :motivo, class: "form-label" %>
+    <%= form.text_field :motivo, class: "form-control" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :mes_cuota, class: "form-label" %>
+    <%= form.text_field :mes_cuota, class: "form-control" %>
+  </div>
+
+  <div class="row g-3">
+  <div class="col-sm-6">
+    <%= form.label :anio, class: "form-label" %>
+    <%= form.number_field :anio, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Guardar', class: "btn btn-success"%>
+  </div>
+<% end %>
